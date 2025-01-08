@@ -23,28 +23,30 @@
             border-radius: 8px;
         }
         .quote-text {
-            font-size: 1.2em;
+            font-size: 1em;
             font-weight: 300;
             margin-bottom: 10px;
+            line-height: 1.4em;
         }
         .quote-author {
-            font-size: 0.9em;
+            font-size: 0.8em;
             color: #555;
             font-style: italic;
             margin-bottom: 20px;
         }
-        .quote-button {
-            font-size: 0.9em;
-            padding: 10px 20px;
+        .refresh-button {
+            background: none;
             border: none;
-            border-radius: 5px;
-            background-color: #007BFF;
-            color: white;
+            font-size: 1.2em;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            color: #007BFF;
+            transition: transform 0.2s ease;
         }
-        .quote-button:hover {
-            background-color: #0056b3;
+        .refresh-button:hover {
+            transform: rotate(90deg);
+        }
+        .refresh-button:focus {
+            outline: none;
         }
     </style>
 </head>
@@ -52,7 +54,7 @@
     <div class="quote-widget">
         <div class="quote-text" id="quote-text"></div>
         <div class="quote-author" id="quote-author"></div>
-        <button class="quote-button" onclick="showRandomQuote()">Show Another Quote</button>
+        <button class="refresh-button" onclick="showRandomQuote()">&#x21bb;</button>
     </div>
 
     <script>
@@ -91,4 +93,5 @@
     </script>
 </body>
 </html>
+
 
