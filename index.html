@@ -23,14 +23,28 @@
             border-radius: 8px;
         }
         .quote-text {
-            font-size: 1.5em;
+            font-size: 1.2em;
             font-weight: 300;
             margin-bottom: 10px;
         }
         .quote-author {
-            font-size: 1em;
+            font-size: 0.9em;
             color: #555;
             font-style: italic;
+            margin-bottom: 20px;
+        }
+        .quote-button {
+            font-size: 0.9em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .quote-button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -38,6 +52,7 @@
     <div class="quote-widget">
         <div class="quote-text" id="quote-text"></div>
         <div class="quote-author" id="quote-author"></div>
+        <button class="quote-button" onclick="showRandomQuote()">Show Another Quote</button>
     </div>
 
     <script>
@@ -64,15 +79,16 @@
             { text: "The most contrarian thing of all is not to oppose the crowd but to think for yourself.", author: "Peter Thiel" }
         ];
 
-        function showDailyQuote() {
-            const today = new Date();
-            const index = today.getDate() % quotes.length;
-            const quote = quotes[index];
+        function showRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const quote = quotes[randomIndex];
             document.getElementById('quote-text').textContent = quote.text;
             document.getElementById('quote-author').textContent = `- ${quote.author}`;
         }
 
-        showDailyQuote();
+        // Show the first quote on page load
+        showRandomQuote();
     </script>
 </body>
 </html>
+
