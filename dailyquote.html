@@ -18,7 +18,7 @@
         }
         .quote-widget {
             position: relative;
-            text-align: center;
+            text-align: left; /* Align text to the left for better layout */
             padding: 40px 30px;
             max-width: 700px;
             width: 100%;
@@ -35,6 +35,7 @@
             line-height: 1.6em;
             color: #555;
             font-style: italic;
+            display: inline-block; /* Keeps the quote text inline */
         }
         .quote-author {
             font-size: 1.1em;
@@ -42,21 +43,18 @@
             font-weight: bold;
         }
         .refresh-button {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background-color: #fdfefe; /* New color for the button */
+            display: inline-block; /* Make the button inline with the quote */
+            background-color: #fdfefe; /* Button background color */
             border: none;
             color: #333;
             font-size: 1.5em;
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            text-align: center;
             cursor: pointer;
             transition: transform 0.3s ease, background-color 0.3s ease;
+            margin-left: 20px; /* Space between the quote and the button */
         }
         .refresh-button:hover {
             transform: rotate(180deg);
