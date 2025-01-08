@@ -1,1 +1,78 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Minimalist Quote</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+            color: #000000;
+            font-family: 'Arial', sans-serif;
+        }
+        .quote-widget {
+            text-align: center;
+            padding: 20px;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+        .quote-text {
+            font-size: 1.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+        .quote-author {
+            font-size: 1em;
+            color: #555;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="quote-widget">
+        <div class="quote-text" id="quote-text"></div>
+        <div class="quote-author" id="quote-author"></div>
+    </div>
+
+    <script>
+        const quotes = [
+            { text: "An investment in knowledge pays the best interest.", author: "Benjamin Franklin" },
+            { text: "The stock market is filled with individuals who know the price of everything, but the value of nothing.", author: "Philip Fisher" },
+            { text: "In investing, what is comfortable is rarely profitable.", author: "Robert Arnott" },
+            { text: "The individual investor should act consistently as an investor and not as a speculator.", author: "Benjamin Graham" },
+            { text: "Price is what you pay. Value is what you get.", author: "Warren Buffett" },
+            { text: "The four most dangerous words in investing are: 'This time it’s different.'", author: "Sir John Templeton" },
+            { text: "Risk comes from not knowing what you’re doing.", author: "Warren Buffett" },
+            { text: "Know what you own, and know why you own it.", author: "Peter Lynch" },
+            { text: "How many millionaires do you know who have become wealthy by investing in savings accounts? I rest my case.", author: "Robert G. Allen" },
+            { text: "If there is one common theme to the world’s financial crises, it’s that excessive debt accumulation often poses greater systemic risks than it seems during a boom.", author: "Carmen Reinhart" },
+            { text: "We don't prognosticate macroeconomic factors. We're looking at companies from a bottom-up perspective on their long-run prospects.", author: "Mellody Hobson" },
+            { text: "Courage taught me no matter how bad a crisis gets ... any sound investment will eventually pay off.", author: "Carlos Slim Helu" },
+            { text: "The biggest risk of all is not taking one.", author: "Mellody Hobson" },
+            { text: "Returns matter a lot. It's our capital.", author: "Abigail Johnson" },
+            { text: "It's not how much money you make, but how much money you keep, how hard it works for you, and how many generations you keep it for.", author: "Robert Kiyosaki" },
+            { text: "Financial peace isn't the acquisition of stuff. It's learning to live on less than you make, so you can give back and invest.", author: "Dave Ramsey" },
+            { text: "Investing should be more like watching paint dry or grass grow. For excitement, take $800 to Las Vegas.", author: "Paul Samuelson" },
+            { text: "Wide diversification is only required when investors do not understand what they are doing.", author: "Warren Buffett" },
+            { text: "You get recessions, you have stock market declines. If you don't understand that's going to happen, then you're not ready.", author: "Peter Lynch" },
+            { text: "The most contrarian thing of all is not to oppose the crowd but to think for yourself.", author: "Peter Thiel" }
+        ];
+
+        function showDailyQuote() {
+            const today = new Date();
+            const index = today.getDate() % quotes.length;
+            const quote = quotes[index];
+            document.getElementById('quote-text').textContent = quote.text;
+            document.getElementById('quote-author').textContent = `- ${quote.author}`;
+        }
+
+        showDailyQuote();
+    </script>
+</body>
+</html>
