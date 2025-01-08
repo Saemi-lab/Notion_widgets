@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,43 +12,53 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #ffffff;
-            color: #000000;
-            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f1f1f1, #e4e4e4); /* Subtle gradient background */
+            color: #333;
+            font-family: 'Helvetica Neue', sans-serif;
         }
         .quote-widget {
-            position: relative; /* Enable positioning for the button */
+            position: relative;
             text-align: center;
-            padding: 20px;
-            max-width: 600px; /* Increased width */
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
+            padding: 30px;
+            max-width: 600px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
         }
         .quote-text {
-            font-size: 1em;
+            font-size: 1.25em;
             font-weight: 300;
-            margin-bottom: 5px; /* Reduced space between text and author */
-            line-height: 1.4em;
+            margin-bottom: 10px;
+            line-height: 1.5em;
+            color: #444;
         }
         .quote-author {
-            font-size: 0.8em;
-            color: #555;
+            font-size: 0.9em;
+            color: #777;
             font-style: italic;
         }
         .refresh-button {
-            position: absolute; /* Position at the bottom-right corner */
-            bottom: 10px;
-            right: 10px;
-            background: none;
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background-color: #007BFF;
             border: none;
-            font-size: 1.2em;
+            color: white;
+            font-size: 1.5em;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             cursor: pointer;
-            color: #007BFF;
-            transition: transform 0.2s ease;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
         .refresh-button:hover {
-            transform: rotate(90deg);
+            transform: rotate(180deg);
+            background-color: #0056b3;
         }
         .refresh-button:focus {
             outline: none;
@@ -72,7 +82,6 @@
             { text: "The four most dangerous words in investing are: 'This time it’s different.'", author: "Sir John Templeton" },
             { text: "Risk comes from not knowing what you’re doing.", author: "Warren Buffett" },
             { text: "Know what you own, and know why you own it.", author: "Peter Lynch" },
-            { text: "How many millionaires do you know who have become wealthy by investing in savings accounts? I rest my case.", author: "Robert G. Allen" },
             { text: "If there is one common theme to the world’s financial crises, it’s that excessive debt accumulation often poses greater systemic risks than it seems during a boom.", author: "Carmen Reinhart" },
             { text: "We don't prognosticate macroeconomic factors. We're looking at companies from a bottom-up perspective on their long-run prospects.", author: "Mellody Hobson" },
             { text: "Courage taught me no matter how bad a crisis gets ... any sound investment will eventually pay off.", author: "Carlos Slim Helu" },
@@ -97,5 +106,3 @@
     </script>
 </body>
 </html>
-
-
