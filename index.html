@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,24 +17,29 @@
             font-family: 'Arial', sans-serif;
         }
         .quote-widget {
+            position: relative; /* Enable positioning for the button */
             text-align: center;
             padding: 20px;
-            max-width: 400px;
+            max-width: 600px; /* Increased width */
             border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
         }
         .quote-text {
             font-size: 1em;
             font-weight: 300;
-            margin-bottom: 10px;
+            margin-bottom: 5px; /* Reduced space between text and author */
             line-height: 1.4em;
         }
         .quote-author {
             font-size: 0.8em;
             color: #555;
             font-style: italic;
-            margin-bottom: 20px;
         }
         .refresh-button {
+            position: absolute; /* Position at the bottom-right corner */
+            bottom: 10px;
+            right: 10px;
             background: none;
             border: none;
             font-size: 1.2em;
@@ -88,7 +93,6 @@
             document.getElementById('quote-author').textContent = `- ${quote.author}`;
         }
 
-        // Show the first quote on page load
         showRandomQuote();
     </script>
 </body>
